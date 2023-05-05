@@ -1,0 +1,25 @@
+<p>movie-detail works!</p>
+
+<div class="container">
+  <p class="text-center h3" >
+    {{ dir.Details.DirectorName }}
+  </p>
+  <div class="row">
+    <div class="col-2">
+      <div class="" *ngFor="let item of movieinput; let i = index">
+        <button  [ngClass]="{'x':item.MovieName==this.color.MovieName}"
+          class="btn p-3"
+          [routerLink]="['movieid', item.MovieID]"
+          (click)="but(i, item.MovieID)"
+        >
+          {{item.MovieName}}
+        </button>
+      </div>
+    </div>
+    <div class="col">
+
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>
+<!-- {{movieArray|json}} -->

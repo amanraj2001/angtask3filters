@@ -1,0 +1,22 @@
+<p>filterdata works!</p>
+<div class="container">
+  <h3>Filter data by Driectorsname</h3>
+  <select class="form-select" aria-label="Default select example" (change)="dir($event)">
+    <option selected>Open this select menu</option>
+    <option *ngFor="let item of filterdata.Directors;let i = index" >{{item}}</option>
+
+  </select>
+
+  <h3>Filter data by Moviename</h3>
+  <select class="form-select" aria-label="Default select example" (change)="dir($event)">
+    <option selected>Open this select menu</option>
+    <option *ngFor="let item of filterdata.Movies;let i = index" >{{item.MovieName}}</option>
+
+  </select>
+  <h3>Filter data by Actorname</h3>
+  <select class="form-select" aria-label="Default select example" (change)="dir($event)">
+    <option selected>Open this select menu</option>
+    <option *ngFor="let item of filterdata.Actors;let i = index" >{{item}}</option>
+
+  </select>
+</div>
